@@ -17,6 +17,16 @@ class BmiResult extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              // Navigate back to the previous screen by popping the current route
+              Navigator.of(context).pop();
+            },
+          ),
           centerTitle: true,
           title: const Text(
             "BMI RESULT",
@@ -37,8 +47,8 @@ class BmiResult extends StatelessWidget {
                   Container(
                     width: 200,
                     height: 100,
-                    padding: EdgeInsets.all(15),
-                    color: Color(0xff1d1e33),
+                    padding: const EdgeInsets.all(15),
+                    color: const Color(0xff1d1e33),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

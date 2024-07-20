@@ -47,8 +47,8 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                     width: 160,
                     height: 170,
                     decoration: BoxDecoration(
-                      color: male ? Colors.blue : Color(0xff1d1e33),
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      color: male ? Colors.blue : const Color(0xff1d1e33),
+                      borderRadius: const BorderRadius.all(Radius.circular(15)),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -110,9 +110,9 @@ class _BmiCalculatorState extends State<BmiClaculator> {
             Container(
               width: 340,
               height: 230,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: const BoxDecoration(
-                color: const Color(0xff1d1e33),
+                color: Color(0xff1d1e33),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -121,7 +121,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                     "HEIGHT",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 25,
                     ),
                   ),
                   Row(
@@ -131,7 +131,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                         "$height",
                         style: const TextStyle(
                           color: Colors.white,
-                          fontSize: 30,
+                          fontSize: 40,
                         ),
                       ),
                       const SizedBox(
@@ -146,6 +146,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                   Slider(
                       min: 0,
                       max: 300,
+                      activeColor: Colors.red,
                       value: height.toDouble(),
                       onChanged: (value) {
                         setState(() {
@@ -164,7 +165,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                 Container(
                   width: 160,
                   height: 200,
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(30),
                   decoration: const BoxDecoration(
                     color: Color(0xff1d1e33),
                     borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -202,7 +203,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(width: 15),
+                          const SizedBox(width: 20),
                           CircleAvatar(
                             backgroundColor: const Color(0xff0a0e21),
                             child: IconButton(
@@ -222,7 +223,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                 Container(
                   width: 160,
                   height: 200,
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(30),
                   decoration: const BoxDecoration(
                     color: Color(0xff1d1e33),
                     borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -260,7 +261,7 @@ class _BmiCalculatorState extends State<BmiClaculator> {
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(width: 15),
+                          const SizedBox(width: 20),
                           CircleAvatar(
                             backgroundColor: const Color(0xff0a0e21),
                             child: IconButton(
